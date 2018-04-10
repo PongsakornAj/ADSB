@@ -1,0 +1,11 @@
+	[Unit]
+	Description=Collect ADSB data from sensor to sqlite database
+	After=network.target
+
+	[Service]
+	User=pi
+	Group=pi
+	ExecStart=/home/pi/tutorial/recorddata.py
+	Restart=on-failure
+	[Install]
+	WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+	[Unit]
+	Description=Gunicorn instance to serve myproject
+	After=network.target
+
+	[Service]
+	User=pi
+	Group=www-data
+	WorkingDirectory=/home/pi/tutorial
+	Environment="PATH=/home/pi/tutorial/tutorialenv/bin"
+	ExecStart=/home/pi/tutorial/tutorialenv/bin/gunicorn --workers 3 --bind unix:myproject.sock -m 007 wsgi
+	Restart=on-failure
+	[Install]
+	WantedBy=multi-user.target

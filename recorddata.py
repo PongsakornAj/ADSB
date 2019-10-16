@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import json
 import os
 from time import sleep
@@ -68,4 +67,3 @@ if __name__ == "__main__":
         print('Exit Connection')
         conn.close()
         
-

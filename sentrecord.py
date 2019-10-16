@@ -55,11 +55,8 @@ def sent_record(record,ttl=3,t=10):
         if ttl>0:
             sent_record(record,ttl=ttl-1)
     return r
-
 def sent_records(data):
     count=0
-    num_data = len(data)
-    s = time.time()
     if len(data)==0:
         return None
     for i,d in enumerate(data):
